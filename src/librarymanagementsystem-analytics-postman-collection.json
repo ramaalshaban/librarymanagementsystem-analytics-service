@@ -1,0 +1,439 @@
+{
+  "info": {
+    "name": "librarymanagementsystem-analytics-service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "getAnalyticSnapshot",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//analyticsnapshots/:analyticSnapshotId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "analyticsnapshots",
+            ":analyticSnapshotId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createAnalyticSnapshot",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"snapshotType\": \"String\",\n  \"scopeType\": \"Enum\",\n  \"scopeId\": \"String\",\n  \"timeRange\": \"Object\",\n  \"data\": \"Object\",\n  \"generatedBy\": \"String\",\n  \"note\": \"Text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//analyticsnapshots",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "analyticsnapshots"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateAnalyticSnapshot",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"snapshotType\": \"String\",\n  \"scopeType\": \"Enum\",\n  \"scopeId\": \"String\",\n  \"timeRange\": \"Object\",\n  \"data\": \"Object\",\n  \"generatedBy\": \"String\",\n  \"note\": \"Text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//analyticsnapshots/:analyticSnapshotId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "analyticsnapshots",
+            ":analyticSnapshotId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteAnalyticSnapshot",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//analyticsnapshots/:analyticSnapshotId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "analyticsnapshots",
+            ":analyticSnapshotId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listAnalyticSnapshots",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//analyticsnapshots",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "analyticsnapshots"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAuditLog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//auditlogs/:auditLogId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "auditlogs",
+            ":auditLogId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createAuditLog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"actorUserId\": \"ID\",\n  \"actionType\": \"String\",\n  \"targetObjectType\": \"String\",\n  \"targetObjectId\": \"String\",\n  \"context\": \"Object\",\n  \"note\": \"Text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//auditlogs",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "auditlogs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateAuditLog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"actorUserId\": \"ID\",\n  \"actionType\": \"String\",\n  \"targetObjectType\": \"String\",\n  \"targetObjectId\": \"String\",\n  \"context\": \"Object\",\n  \"note\": \"Text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//auditlogs/:auditLogId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "auditlogs",
+            ":auditLogId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteAuditLog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//auditlogs/:auditLogId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "auditlogs",
+            ":auditLogId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listAuditLogs",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//auditlogs",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "auditlogs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getChangeStreamEvent",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//changestreamevents/:changeStreamEventId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "changestreamevents",
+            ":changeStreamEventId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createChangeStreamEvent",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"streamName\": \"String\",\n  \"payload\": \"Object\",\n  \"sourceObject\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//changestreamevents",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "changestreamevents"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteChangeStreamEvent",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//changestreamevents/:changeStreamEventId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "changestreamevents",
+            ":changeStreamEventId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listChangeStreamEvents",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//changestreamevents",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "changestreamevents"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

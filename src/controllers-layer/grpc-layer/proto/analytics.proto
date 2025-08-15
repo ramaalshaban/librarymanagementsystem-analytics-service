@@ -1,0 +1,61 @@
+
+syntax = "proto3";
+
+package analytics;
+
+import "google/protobuf/struct.proto";
+import "google/protobuf/timestamp.proto";
+message analyticSnapshot {
+    string id = 1;
+    string snapshotType = 2;
+    int32 scopeType = 3;
+    string scopeId = 4;
+    google.protobuf.Struct timeRange = 5;
+    google.protobuf.Struct data = 6;
+    string generatedBy = 7;
+    string note = 8;
+}
+message auditLog {
+    string id = 1;
+    string actorUserId = 2;
+    string actionType = 3;
+    string targetObjectType = 4;
+    string targetObjectId = 5;
+    google.protobuf.Struct context = 6;
+    string note = 7;
+}
+message changeStreamEvent {
+    string id = 1;
+    string streamName = 2;
+    google.protobuf.Struct payload = 3;
+    string sourceObject = 4;
+}
+
+
+
+
+
+
+message VoidRequest {}
+
+message CurrentUserReply {
+    string userId = 1;
+    string sessionId = 2;
+    string fullname = 3;
+    string email = 4;
+    string roleId = 5;
+    string avatar = 6;
+    bool emailVerified = 7;
+        string mobile = 8;
+    bool mobileVerified = 9;        repeated string userGroupNames = 10;
+    repeated string userGroupIdList = 11;string accessToken = 12;
+}
+
+message HelloMessageReply {
+    string hello = 1;
+}
+
+service analyticsService {
+    rpc currentUser(VoidRequest) returns (CurrentUserReply);
+    rpc helloMessage(VoidRequest) returns (HelloMessageReply);
+}
